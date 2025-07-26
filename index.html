@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SILENTHELP - Anonymous Support Platform</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="exit-button">
+    <a href="https://www.google.com" class="btn btn-danger btn-sm">Exit Quickly</a>
+  </div>
+
+  <div class="header">
+    <h1>SILENTHELP</h1>
+    <p>Speak up safely. Get help anonymously.</p>
+  </div>
+
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="form-section">
+          <h4>Submit a Help Request</h4>
+          <form method="POST" action="/submit" id="helpForm">
+
+            
+           <div class="form-group">
+              <label for="category">Select Category</label>
+              <select class="form-control" id="category" name="category" required>
+                <option value="">Choose...</option>
+                <option value="mental">Mental Health</option>
+                <option value="bullying">Bullying</option>
+                <option value="abuse">Domestic Abuse</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Describe your issue (do not include your name)</label>
+              <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location (optional)</label>
+              <input type="text" class="form-control" id="location" name="location"/>
+            </div>
+
+            <div class="form-group">
+              <label for="preferred_mode">Preferred Mode of Help</label>
+              <select class="form-control" id="preferred_mode" name="preferred_mode" required>
+                <option value="chat">Chat</option>
+                <option value="email">Email</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Your Email (optional)</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

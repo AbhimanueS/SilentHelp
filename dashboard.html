@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SILENTHELP - Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <style>
+    body {
+      background-color: #f0f2f5;
+    }
+    .header {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    table {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h2>SILENTHELP - Submitted Requests</h2>
+  </div>
+
+  <div class="container my-5">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th>Preferred Mode</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for req in requests %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ req[1] }}</td>
+          <td>{{ req[2] }}</td>
+          <td>{{ req[3] }}</td>
+          <td>{{ req[4] }}</td>
+          <td>{{ req[5] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
