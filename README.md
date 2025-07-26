@@ -22,16 +22,15 @@ A Flask-based anonymous web platform that empowers individuals to report sensiti
 📁 Project Structure
 
 silenthelp/  
-├── app.py                 # Flask backend logic  
-├── requirements.txt       # Python dependencies  
-├── README.md              # Project documentation  
+├── silenthelp.py                 # Flask backend logic  
+├── requirements.txt              # Python dependencies  
 ├── templates/  
-│   ├── index.html         # Anonymous form page  
-│   └── dashboard.html     # Admin dashboard  
+│   ├── index.html                # Anonymous form page  
+│   └── dashboard.html            # Admin dashboard  
 ├── static/  
-│   ├── css/style.css      # Custom styles  
-│   └── js/script.js       # Alert on submit  
-└── data.db (auto-created) # Local SQLite database
+│   ├── css/style.css             # Custom styles  
+│   └── js/script.js              # Alert on submit  
+└── data.db (auto-created) 
 
 ⚙️ Setup Instructions
 
